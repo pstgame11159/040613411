@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style ="border:1px solid black;">
+        <h1>แบบฟอร์มจองทัวร์</h1>
+    <form action ="form-echo.php" method="post" >
+    <fieldset>
+        <legend>ข้อมูลทั่วไป</legend>
+
+        <label>ชื่อนามสกุล</label>
+        <div>
+            <input type="text"  name="name"  placeholder="กรอกชื่อ-สกุล" required>*
+        </div>
+
+        <label>Email:</label>
+        <div>
+            <input type="email"  name="email" >*
+        </div>
+
+        <label>โทรศัพท์:</label>
+        <div>
+             <input type="tel"  name="phone"  value ="+66">*
+        </div>
+
+        <label>ที่อยู่:</label>
+        <div>
+         <textarea name="address" rows="3" cols="40"></textarea>
+        </div>
+        
+        <label>รหัสไปรษณีย์:</label>
+         <input type="text"  name="zidcode" size="5" pattern="[0-9]{5}">*
+
+         <div>     
+         <label>รูปผู้จอง:</label>
+         <input type="file"  name="image"  >
+        </div>
+
+    </fieldset>
+
+      
+     <fieldset>
+        <legend>ข้อมูลเข้าสู่ระบบ</legend>
+
+        <div>
+        <label>Username:</label>
+        <div>
+            <input type = "text" name="username" pattern="[a-z0-9A-Z].{8}">
+        </div>
+        <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่8 ตัวขึ้นไป</i>
+        </div>
+
+        <div style ="margin-top:20px;">  
+        <label>Password:</label>
+        <div>
+            <input type = "password"  name = "password" pattern="[a-zA-Z].{8}">
+        </div>
+        <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
+        </div>
+        
+     </fieldset>
+
+
+     <fieldset>
+        <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+
+        <div>
+        <label>แพคเก็จทัวร์:</label>
+        <select  name="country">
+            <option value = "">--select--</option>
+            <option value = "Afghanistan">Afghanistan</option>
+            <option value = "Nigeri">Nigeri</option>
+            <option value = "Pakistan">Pakistan</option>
+            <option value = "Syria">Syria</option>
+            <option value = "Iraq">Iraq</option>
+        </select >
+        <div>
+            <label>วันที่เดินทาง</label>
+                <input type = "date" name = "date">
+         </div>
+         <div>
+            <label>จำนวนผู้เดินทาง</label>
+                <input type = "number" name = "people"min="1" max="10" size="10" >
+         </div>
+
+         <div>
+            <label>เน้นการท่องเที่ยวแบบใด?</label>
+                <div><input type = "checkbox" name="shop" value="shop">ชอปปิ้ง</div>
+                <div><input type = "checkbox" name="nature" value="nature">ธรรมชาติ</div>
+                <div><input type = "checkbox"  name="sea" value="sea">ทะเล</div>
+         </div>
+
+     </fieldset>
+      <div>
+            <label>ยอมรับเงื่อนไขและข้อตกลง</label>
+                <input type = "radio" checked name ="accept" value="I agree">I agree
+                <input type = "radio" name="accept" value="I disafree">I disafree
+                <button type ="submit">จอง</button>
+         </div>
+        </form>
+   </div>
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+table,td,th{
+    border: 2px solid #90ca67;
+    border-collapse: collapse;
+    margin:auto;
+    padding: 0 5px 0 10px;
+
+}
+tr:nth-child(even) {
+        background-color: #d9f0ce;
+    }
+    tr:nth-child(odd) {
+        background-color: #edfbe9;
+    }
+span,div{
+    text-align: center;
+}
+</style>
+<body>
+    
+
+
+    <table>
+        <tr>
+            <th>
+                <div></div>
+            </th>
+            <th><span>ตัวอย่างข้อมูล</span> </th>
+            <th><span>Input type ?</span> </th>
+        </tr>
+        <tr>
+            <td> 1.</td>
+            <td>ชื่อเต็ม/ย่อของสาขาวิชา</td>
+            <td><div><pre>&lt;input type="text"&#62</pre><input type ="text"name="cs" ></div></td>
+        </tr>
+        <tr>
+            <td> 2.</td>
+            <td>จำนวนเงินที่จะโอน</td>
+            <td><div><pre>&lt;input type="number"&#62</pre><input type ="number" name="amount"></div></td>
+        </tr>
+        <tr>
+            <td> 3.</td>
+            <td>อาหารที่ชื่อชอบ 5 ชนิดที่ชื่อชอบจากมากไปน้อย</td>
+            <td><div><pre>&lt;input type="checkbox"&#62</pre>
+                <input type="checkbox" name="5">5
+                <input type="checkbox" name="4">4
+                <input type="checkbox" name="3">3
+                <input type="checkbox" name="2">2
+                <input type="checkbox" name="1">1
+            </div>
+            
+            </td>
+        </tr>
+        <tr>
+            <td> 4.</td>
+            <td>ค่าไฟฟ้า 3 เดือนที่ผ่านมา</td>
+            <td><div><pre>&lt;input type="number"&#62</pre><input type ="number" name="amount3"></div></td>
+        </tr>
+        <tr>
+            <td> 5.</td>
+            <td>รหัสบัตรประชาชน</td>
+            <td><div><pre>&lt;input type="text"&#62</pre><input type ="text" name="secret"></div></td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>ความพึงพอใจของหนังสือเล่มนี้</td>
+            <td><div><pre>&lt;input type="radio"&#62</pre><input type ="radio" name="score" value = "5">5
+                                                          <input type ="radio" name="score" value = "4">4
+                                                          <input type ="radio" name="score" value = "4">3
+                                                          <input type ="radio" name="score" value = "4">2
+                                                          <input type ="radio" name="score" value = "4">1
+                                                        </div>
+            </td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>อาการป่วย</td>
+            <td><div><pre>&lt;input type="text"&#62</pre><input type ="text" name="illness"></div></td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวันซีนหรือไม่</td>
+            <td><div><pre>&lt;input type="radio"&#62</pre><input type ="radio" name="Yesorno" value = "รับ">รับ
+                                                          <input type ="radio" name="Yesorno" value = "ไม่รับ">ไม่รับ</td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>รหัสผ่าน</td>
+            <td><div><pre>&lt;input type="password"&#62</pre><input type ="password" name="password"></div></td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>เวลาเริ่มเข้าเรียนและสิ้นสุดการเรียน</td>
+            <td><div><pre>&lt;input type="time"&#62</pre><input type ="time" name="time"></div></td>
+        </tr>
+        <tr>
+            <td>11.</td>
+            <td>วันเวลาที่ต้องไปพบแพทย์</td>
+            <td><div><pre>&lt;input type="datetime-local"&#62</pre><input type ="datetime-local" name="datetime-local"></div></td>
+        </tr>
+    </table>
+</body>
+</html>
