@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            function countTheWord(str) {
+			const lowfont = str.toLowerCase();
+			const Count = lowfont.split('the').length - 1;
+			alert("มี The ทั้งหมด " + Count + " คำ");
+            }
+        </script>
+    </head>
+<body>
+    The eight ruler og the Fifth Dynasty in the late 25th
+    century.<br><br>
+    <a href="#" onclick="countTheWord('The eighth ruler of the Fifth Dynasty in the late 25th century')">
+    Click for count 'The'</a>
+</body>
+</html>
