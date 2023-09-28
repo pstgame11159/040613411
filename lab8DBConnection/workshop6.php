@@ -16,8 +16,7 @@ $stmt = $pdo->prepare("SELECT * FROM member");
 $stmt->execute();
 while ($row = $stmt->fetch()) 
 {
-echo "รหัสสินค้า: " . $row ["username"] . "<br>";
-echo "<a href='editform.php?username =".$row["username"]."'>แก ้ไข</a> | ";
+echo "ชื่อ: " . $row ["username"] . "<br>";
 echo "<a href='#' onclick='confirmDelete(`". $row["username"] ."`)'>ลบ</a>";
 echo "<hr>\n";
 }

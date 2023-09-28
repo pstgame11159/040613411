@@ -1,8 +1,11 @@
 <?php include "connect.php" ?>
 <?php
 
-if($_POST)
-{
+if($_POST){
+        $filename = $_POST["username"].".jpg";
+        $tempname = $_FILES["uploadfile"]["tmp_name"];
+        $folder = "./member_photo/" . $filename;
+        move_uploaded_file($tempname, $folder);
 
 $stmt = $pdo->prepare("INSERT INTO member VALUES (?, ?, ?, ?,?,?)");
 $stmt->bindParam(1, $_POST["username"]);
@@ -18,15 +21,15 @@ header("location: workshop6.php");
 <html>
 <head><meta charset="UTF-8"></head>
 <body>
-เพิ่ม User สำเร็จ    <?=$_POST["username"] ?>
+เพิ่ม User สำเร็จ    <?=$_POST["username"] ;
+
+
+}
+else{
+
+    header("location: workshop6.php");      
+}
+?>
 
 </body>
 </html>
-<?php } 
-else{
-
-    header("location: workshop6.php");
-}
-
-
-?>
